@@ -1,0 +1,29 @@
+####    get all user
+GET http://localhost:5000/user HTTP/1.1 
+
+####    create new user
+POST http://localhost:5000/user HTTP/1.1
+content-type: application/json
+
+{
+    "username": "ARDHITO",
+    "email": "ARDHITO@gmail.com",
+    "password": "passqword"
+}
+
+####    get one user by id
+@id = 5dd40289af102c4efa340602
+GET  http://localhost:5000/user/{{id}} HTTP/1.1
+
+####    user login
+POST http://localhost:5000/user/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "azkaka@gmail.com",
+    "password": "passqword"
+}
+
+####    delete user by id
+@id = 5dd40289af102c4efa340602
+DELETE  http://localhost:5000/user/{{id}} HTTP/1.1
